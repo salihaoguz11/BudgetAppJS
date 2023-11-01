@@ -36,3 +36,7 @@ body {
   background: var(--mainRed);
   color: var(--mainWhite);
 }
+.budget-submit:hover {
+  background: var(--mainGreen);
+  color: var(--mainWhite);
+}
