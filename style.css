@@ -13,8 +13,26 @@ body {
 .expense-feedback {
   display: none;
 }
-.budget-form {
+.budget-form,
+.expense-form {
   border: 0.15rem solid var(--mainGreen);
   padding: 1rem;
   border-radius: 0.25rem;
+}
+.expense-form {
+  border: 0.15rem solid var(--mainRed);
+}
+.budget-submit {
+  background: transparent;
+  border: 0.1rem solid var(--mainGreen);
+  color: var(--mainGreen);
+}
+.expense-submit {
+  background: transparent;
+  border: 0.1rem solid var(--mainRed);
+  color: var(--mainRed);
+}
+.expense-submit:hover {
+  background: var(--mainRed);
+  color: var(--mainWhite);
 }
