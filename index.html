@@ -84,22 +84,32 @@
               <div class="expense-feedback alert alert-danger text-capitalize">
                 expense-feedback
               </div>
-              <form class="expense-form border-dark bg-success">
-                <h5>enter your expense name</h5>
-                <div>
+              <form
+                class="expense-form border-dark bg-success"
+                id="expense-form"
+              >
+                <h5 class="text-capitalize">enter your expense name</h5>
+                <div class="form-group">
                   <input
                     type="text"
                     class="expense-input form-control"
                     id="expense-input"
                   />
                 </div>
-                <div>
+                <div class="form-group">
                   <input
                     type="number"
                     class="expense-input form-control"
                     id="amount-input"
                   />
                 </div>
+                <button
+                  type="submit"
+                  class="btn text-capitalize expense-submit mt-2 border-3 bg-body-secondary"
+                  id="expense-submit"
+                >
+                  add expense
+                </button>
               </form>
             </div>
           </div>
