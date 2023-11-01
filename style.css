@@ -5,3 +5,16 @@
   --mainRed: #b80c09;
   --mainBlue: #05668d;
 }
+body {
+  background: var(--mainWhite);
+  color: var(--mainDark);
+}
+.budget-feedback,
+.expense-feedback {
+  display: none;
+}
+.budget-form {
+  border: 0.15rem solid var(--mainGreen);
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
