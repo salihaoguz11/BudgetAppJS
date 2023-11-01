@@ -40,3 +40,7 @@ body {
   background: var(--mainGreen);
   color: var(--mainWhite);
 }
+
+.budget-input {
+  border: 0.05rem solid var(--mainGreen);
+}
