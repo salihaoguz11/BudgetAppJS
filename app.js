@@ -38,6 +38,11 @@ function submitBudgetForm() {
     showBalance();
   }
 }
+function showBalance() {
+  let expense = totalExpense();
+  let total = parseInt(budgetAmount.innerText) - expense;
+  balanceAmount.textContent = total;
+}
 
 function submitExpenseForm() {
   const expenseValue = expenseInput.value;
@@ -98,3 +103,15 @@ function addExpense(expense) {
   `;
   expenseList.appendChild(expenseDiv);
 }
+
+const totalExpense = () => {
+  let total = 0;
+  if (itemList.length > 0) {
+    total = itemList.reduce(function (acc, curr) {
+      acc += curr.amount;
+      return acc;
+    }, 0);
+  }
+  expenseAmount.innerHTML = total;
+  return total;
+};
