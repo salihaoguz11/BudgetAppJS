@@ -96,6 +96,6 @@ body {
 .showGreen {
   color: var(--mainGreen);
 }
-.showBlue {
-  color: var(--mainBlue);
+.showBlack {
+  color: var(--mainDark);
 }

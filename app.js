@@ -42,6 +42,9 @@ function showBalance() {
   let expense = totalExpense();
   let total = parseInt(budgetAmount.innerText) - expense;
   balanceAmount.textContent = total;
+  if (total < 0) {
+    balance.classList.remove("showGreen", "showBlack");
+  }
 }
 
 function submitExpenseForm() {
