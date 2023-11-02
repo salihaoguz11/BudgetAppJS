@@ -61,3 +61,26 @@ body {
 .delete-icon {
   color: var(--mainRed);
 }
+.edit-icon:hover {
+  color: var(--mainBlue);
+}
+.delete-icon:hover {
+  color: var(--mainRed);
+}
+.showItem {
+  display: block;
+}
+.info-title {
+  font-size: 1.5rem;
+}
+.budget {
+  font-size: 1.6rem;
+  color: var(--mainGreen);
+}
+.expense {
+  font-size: 1.6rem;
+  color: var(--mainRed);
+}
+.balance {
+  font-size: 1.6rem;
+}
