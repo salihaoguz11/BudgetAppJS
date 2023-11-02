@@ -84,3 +84,18 @@ body {
 .balance {
   font-size: 1.6rem;
 }
+.budget-icon,
+.expense-icon,
+.balance-icon {
+  font-size: 2.5rem;
+  color: var(--mainBlue);
+}
+.showRed {
+  color: var(--mainRed);
+}
+.showGreen {
+  color: var(--mainGreen);
+}
+.showBlue {
+  color: var(--mainBlue);
+}
