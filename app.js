@@ -18,3 +18,11 @@ budgetForm.addEventListener("submit", (e) => {
   e.preventDefault();
   submitBudgetForm();
 });
+
+function submitBudgetForm() {
+  const value = budgetInput.value;
+  if (value === "" || value < 0) {
+    budgetFeedback.classList.add("showItem");
+    budgetFeedback.innerHTML = `<p>value cannot be empty or negative</p>`;
+  }
+}
