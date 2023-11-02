@@ -44,3 +44,20 @@ body {
 .budget-input {
   border: 0.05rem solid var(--mainGreen);
 }
+.expense-input {
+  border: 0.05rem solid var(--mainRed);
+}
+.expense-amount,
+.expense-title {
+  color: var(--mainRed);
+}
+.edit-icon,
+.delete-icon {
+  color: var(--mainBlue);
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.delete-icon {
+  color: var(--mainRed);
+}
