@@ -53,5 +53,13 @@ function submitExpenseForm() {
     expenseInput.value = "";
     // expenseValue = "";
     amountInput.value = "";
+
+    //todo new element as an expense
+
+    let expense = {
+      id: itemID,
+      title: expenseValue,
+      amount: amount,
+    };
   }
 }
