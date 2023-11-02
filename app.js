@@ -28,9 +28,9 @@ expenseList.addEventListener("click", (e) => {
     editExpense(e.target.parentElement);
     expenseInput.focus();
     showBalance();
-  }else if(e.target.parentElement.classList.contains("delete-icon"){
-removeExpense(e.target.parent)
-showBalance()
+  } else if (e.target.parentElement.classList.contains("delete-icon")) {
+    removeExpense(e.target.parentElement);
+    showBalance();
   }
 });
 
@@ -148,6 +148,15 @@ function editExpense(element) {
   let tempList = itemList.filter((item) => {
     return item.id !== id;
   });
+  itemList = tempList;
+  showBalance();
+}
+function removeExpense(element) {
+  let id = parseInt(element.dataset.id);
+  let parent = element.parentElement.parentElement.parentElement;
+
+  expenseList.removeChild(parent);
+  let tempList = itemList.filter((item) => item.id !== id);
   itemList = tempList;
   showBalance();
 }
