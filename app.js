@@ -29,5 +29,8 @@ function submitBudgetForm() {
       budgetFeedback.classList.remove("showItem");
     }, 2000);
   } else {
+    budgetAmount.textContent = value;
+    budgetInput.value = 0;
+    showBalance();
   }
 }
