@@ -45,5 +45,10 @@ function submitExpenseForm() {
   if (expenseValue === "" || amountValue === 0 || amountValue < 0) {
     expenseFeedback.classList.add("showItem");
     expenseFeedback.innerHTML = `<p>values cannot be empty or negative</p>`;
+    setTimeout(() => {
+      expenseFeedback.classList.remove("showItem");
+      amountValue.value = "";
+      expenseValue.value = "";
+    }, 3000);
   }
 }
