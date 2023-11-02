@@ -47,8 +47,11 @@ function submitExpenseForm() {
     expenseFeedback.innerHTML = `<p>values cannot be empty or negative</p>`;
     setTimeout(() => {
       expenseFeedback.classList.remove("showItem");
-      amountValue.value = "";
-      expenseValue.value = "";
     }, 3000);
+  } else {
+    let amount = parseInt(amountValue);
+    expenseInput.value = "";
+    // expenseValue = "";
+    amountInput.value = "";
   }
 }
