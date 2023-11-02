@@ -125,3 +125,18 @@ const totalExpense = () => {
   expenseAmount.innerHTML = total;
   return total;
 };
+
+function editExpense(element) {
+  let id = parseInt(element.dataset.id);
+  let parent = element.parentElement.parentElement.parentElement;
+  expenseList.removeChild(parent);
+
+  let expense = itemList.filter((item) => item.id === id);
+  expenseInput.value = expense[0].title;
+  amountInput.value = expense[0].amount;
+  let tempList = itemList.filter((item) => {
+    return item.id !== id;
+  });
+  itemList = tempList;
+  showBalance();
+}
