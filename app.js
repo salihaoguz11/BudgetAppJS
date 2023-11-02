@@ -24,5 +24,10 @@ function submitBudgetForm() {
   if (value === "" || value < 0) {
     budgetFeedback.classList.add("showItem");
     budgetFeedback.innerHTML = `<p>value cannot be empty or negative</p>`;
+
+    setTimeout(function () {
+      budgetFeedback.classList.remove("showItem");
+    }, 2000);
+  } else {
   }
 }
