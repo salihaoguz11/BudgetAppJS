@@ -61,5 +61,10 @@ function submitExpenseForm() {
       title: expenseValue,
       amount: amount,
     };
+    itemID++;
+    //itemList.push(expense)
+    itemList = [expense, ...itemList];
+    addExpense(expense);
+    showBalance();
   }
 }
