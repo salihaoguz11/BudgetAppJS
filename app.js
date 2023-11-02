@@ -23,6 +23,17 @@ expenseForm.addEventListener("submit", (e) => {
   submitExpenseForm();
 });
 
+expenseList.addEventListener("click", (e) => {
+  if (e.target.parentElement.classList.contains("edit-icon")) {
+    editExpense(e.target.parentElement);
+    expenseInput.focus();
+    showBalance();
+  }else if(e.target.parentElement.classList.contains("delete-icon"){
+removeExpense(e.target.parent)
+showBalance()
+  }
+});
+
 function submitBudgetForm() {
   const value = budgetInput.value;
   if (value === "" || value < 0) {
