@@ -20,7 +20,7 @@ budgetForm.addEventListener("submit", (e) => {
 });
 expenseForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  submitBudgetForm();
+  submitExpenseForm();
 });
 
 function submitBudgetForm() {
@@ -69,7 +69,7 @@ function submitExpenseForm() {
   }
 }
 
-function addExpense() {
+function addExpense(expense) {
   const expenseDiv = document.createElement("div");
   expenseDiv.classList.add("expense");
   expenseDiv.innerHTML = `
@@ -77,10 +77,10 @@ function addExpense() {
   class="expense-item d-flex justify-content-between align-items-baseline"
 >
   <h6 class="expense-title mb-0 text-uppercase list-item">
-    title
+    ${expense.title}
   </h6>
 
-  <h5 class="expense-amount mb-0 list-item">amount</h5>
+  <h5 class="expense-amount mb-0 list-item">${expense.amount}</h5>
   <div class="expense-icons list-item">
     <a
       href="#"
@@ -96,4 +96,5 @@ function addExpense() {
 </div>
   
   `;
+  expenseList.appendChild(expenseDiv);
 }
