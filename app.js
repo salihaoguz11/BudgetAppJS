@@ -18,7 +18,10 @@ budgetForm.addEventListener("submit", (e) => {
   e.preventDefault();
   submitBudgetForm();
 });
-expenseForm.addEventListener("submit", (e) => {});
+expenseForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  submitBudgetForm();
+});
 
 function submitBudgetForm() {
   const value = budgetInput.value;
