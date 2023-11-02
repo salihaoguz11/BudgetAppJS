@@ -18,6 +18,7 @@ budgetForm.addEventListener("submit", (e) => {
   e.preventDefault();
   submitBudgetForm();
 });
+expenseForm.addEventListener("submit", (e) => {});
 
 function submitBudgetForm() {
   const value = budgetInput.value;
@@ -32,5 +33,14 @@ function submitBudgetForm() {
     budgetAmount.textContent = value;
     budgetInput.value = 0;
     showBalance();
+  }
+}
+
+function submitExpenseForm() {
+  const expenseValue = expenseInput.value;
+  const amountValue = amountInput.value;
+  if (expenseValue === "" || amountValue === 0 || amountValue < 0) {
+    expenseFeedback.classList.add("showItem");
+    expenseFeedback.innerHTML = `<p>values cannot be empty or negative</p>`;
   }
 }
