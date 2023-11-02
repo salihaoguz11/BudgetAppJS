@@ -10,3 +10,11 @@ const expenseForm = document.getElementById("expense-form");
 const expenseInput = document.getElementById("expense-input");
 const amountInput = document.getElementById("amount-input");
 const expenseList = document.getElementById("expense-list");
+
+let itemID = 0;
+let itemList = [];
+
+budgetForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  submitBudgetForm();
+});
