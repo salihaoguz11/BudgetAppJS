@@ -14,15 +14,18 @@ const expenseList = document.getElementById("expense-list");
 let itemID = 0;
 let itemList = [];
 
+// budgetForm submit
 budgetForm.addEventListener("submit", (e) => {
   e.preventDefault();
   submitBudgetForm();
 });
+// expenseForm submit
 expenseForm.addEventListener("submit", (e) => {
   e.preventDefault();
   submitExpenseForm();
 });
 
+//event listener has been added to parent element (expenseList)to control whole element
 expenseList.addEventListener("click", (e) => {
   if (e.target.parentElement.classList.contains("edit-icon")) {
     editExpense(e.target.parentElement);
@@ -33,8 +36,9 @@ expenseList.addEventListener("click", (e) => {
     showBalance();
   }
 });
-
+// This function handles the submission of the budget form.
 function submitBudgetForm() {
+  // It checks if the input value is empty or negative.If it is, it displays an error message.
   const value = budgetInput.value;
   if (value === "" || value < 0) {
     budgetFeedback.classList.add("showItem");
@@ -44,8 +48,10 @@ function submitBudgetForm() {
       budgetFeedback.classList.remove("showItem");
     }, 2000);
   } else {
+    //If the input value is valid, it updates the budget amount on the page, resets the input field
     budgetAmount.textContent = value;
     budgetInput.value = 0;
+    // and calls the showBalance function to update the balance.
     showBalance();
   }
 }
