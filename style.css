@@ -47,10 +47,12 @@ body {
 .expense-input {
   border: 0.05rem solid var(--mainRed);
 }
+/* single expense part,edit and delete icons */
 .expense-amount,
 .expense-title {
   color: var(--mainRed);
 }
+
 .edit-icon,
 .delete-icon {
   color: var(--mainBlue);
@@ -61,15 +63,13 @@ body {
 .delete-icon {
   color: var(--mainRed);
 }
-.edit-icon:hover {
-  color: var(--mainBlue);
-}
-.delete-icon:hover {
-  color: var(--mainRed);
-}
+
 .showItem {
   display: block;
 }
+
+/* budget,expense,balance part with icons */
+
 .info-title {
   font-size: 1.5rem;
 }
@@ -99,6 +99,7 @@ body {
 .showBlack {
   color: var(--mainDark);
 }
+/* media query  */
 
 @media screen and (min-width: 992px) {
   .budget,
