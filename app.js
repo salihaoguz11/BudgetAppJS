@@ -141,6 +141,8 @@ const totalExpense = () => {
 function editExpense(element) {
   let id = parseInt(element.dataset.id);
   let parent = element.parentElement.parentElement.parentElement;
+  console.log(parent);
+  //remove from dom
   expenseList.removeChild(parent);
 
   let expense = itemList.filter((item) => item.id === id);
