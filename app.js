@@ -103,7 +103,7 @@ function addExpense(expense) {
   <div
   class="expense-item d-flex justify-content-between align-items-baseline"
 >
-  <h6 class="expense-title mb-0 text-uppercase list-item">
+  <h6 class="expense-title mb-0 text-uppercase list-item">-
     ${expense.title}
   </h6>
 

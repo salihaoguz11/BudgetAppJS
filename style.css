@@ -99,3 +99,23 @@ body {
 .showBlack {
   color: var(--mainDark);
 }
+
+@media screen and (min-width: 992px) {
+  .budget,
+  .expense,
+  .balance {
+    font-size: 2.6rem;
+  }
+  .budget-icon,
+  .expense-icon,
+  .balance-icon {
+    font-size: 3.5rem;
+  }
+  .list-item {
+    flex: 0 0 33.3%;
+    text-align: center;
+  }
+  .expence-item {
+    height: 2rem;
+  }
+}
