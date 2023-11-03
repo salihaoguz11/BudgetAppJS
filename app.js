@@ -68,7 +68,7 @@ function showBalance() {
 function submitExpenseForm() {
   const expenseValue = expenseInput.value;
   const amountValue = amountInput.value;
-  if (expenseValue === "" || amountValue === 0 || amountValue < 0) {
+  if (expenseValue === "" || amountValue === "" || amountValue < 0) {
     expenseFeedback.classList.add("showItem");
     expenseFeedback.innerHTML = `<p>values cannot be empty or negative</p>`;
     setTimeout(() => {
@@ -94,6 +94,7 @@ function submitExpenseForm() {
     showBalance();
   }
 }
+//add expense
 
 function addExpense(expense) {
   const expenseDiv = document.createElement("div");
