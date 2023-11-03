@@ -175,27 +175,24 @@ const totalExpense = () => {
   expenseAmount.innerHTML = total;
   return total;
 };
+
 // The editExpense function is responsible for editing an expense record. It takes an 'element' as input,
 // which should be the parent element of the edit action (containing the 'edit' button).
 
-// It first extracts the 'id' of the expense from the 'data-id' attribute of the provided 'element'.
-// Then, it identifies the parent container of the entire expense item by traversing up the DOM tree
-// using 'element.parentElement.parentElement.parentElement'. This parent container is logged to the console.
-
-// After identifying the parent container, it removes the corresponding expense item from the DOM
-// by using 'expenseList.removeChild(parent)'.
-
-// It then retrieves the original expense information using the 'id' and populates the expense input
-// fields (title and amount) for editing. The edited item is removed from 'itemList', and 'showBalance' is
-// called to update the balance based on the changes made.
-
 function editExpense(element) {
+  // It first extracts the 'id' of the expense from the 'data-id' attribute of the provided 'element'.
+  // Then, it identifies the parent container of the entire expense item by traversing up the DOM tree
+  // using 'element.parentElement.parentElement.parentElement'. This parent container is logged to the console.
   let id = parseInt(element.dataset.id);
   let parent = element.parentElement.parentElement.parentElement;
   console.log(parent);
-  //remove from dom
-  expenseList.removeChild(parent);
 
+  // After identifying the parent container, it removes the corresponding expense item from the DOM
+  // by using 'expenseList.removeChild(parent)'.
+  expenseList.removeChild(parent);
+  // It then retrieves the original expense information using the 'id' and populates the expense input
+  // fields (title and amount) for editing. The edited item is removed from 'itemList', and 'showBalance' is
+  // called to update the balance based on the changes made.
   let expense = itemList.filter((item) => item.id === id);
   expenseInput.value = expense[0].title;
   amountInput.value = expense[0].amount;
@@ -205,6 +202,10 @@ function editExpense(element) {
   itemList = tempList;
   showBalance();
 }
+
+// The removeExpense function is responsible for deleting an expense record. It takes an 'element' as input,
+// which should be the parent element of the delete action (containing the 'delete' button).
+
 function removeExpense(element) {
   let id = parseInt(element.dataset.id);
   let parent = element.parentElement.parentElement.parentElement;
